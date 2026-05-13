@@ -1,1 +1,91 @@
-
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mevduat Faizi Hesaplama Rehberleri | Vadeli Mevduat, Faiz Getirisi</title>
+  <meta name="description" content="Vadeli mevduat faizi hesaplama, faiz getirisi ve en yüksek mevduat faiz oranları rehberleri. Ücretsiz online mevduat hesaplayıcı.">
+  <meta name="keywords" content="mevduat faizi hesaplama, vadeli mevduat, faiz getirisi, TL mevduat faizi, en yüksek mevduat faizi">
+  <link rel="canonical" href="https://polatozaslan21.github.io/mevduatfaizi/">
+  <meta property="og:title" content="Mevduat Faizi Hesaplama Rehberleri | Vadeli Mevduat">
+  <meta property="og:description" content="Vadeli mevduat faizi hesaplama, faiz getirisi ve en yüksek mevduat faiz oranları rehberleri.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://polatozaslan21.github.io/mevduatfaizi/">
+  <meta property="og:locale" content="tr_TR">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"mevduatfaizi","url":"https://polatozaslan21.github.io/mevduatfaizi/","description":"Ücretsiz mevduat faizi hesaplama rehberleri ve araçları"}</script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>
+  <div class="container">
+    <a href="index.html" class="logo">mevduat<span>faizi</span></a>
+    <ul>
+      <li><a href="index.html" class="active">Ana Sayfa</a></li>
+      <li><a href="index.html#hesapla">Hesapla</a></li>
+      <li><a href="index.html#blog">Blog</a></li>
+      <li><a href="https://covrixa.com/tr/" target="_blank" rel="noopener">Covrixa</a></li>
+    </ul>
+  </div>
+</nav>
+<section class="hero">
+  <div class="container">
+    <h1>Ücretsiz Mevduat Faizi Hesaplama Rehberleri</h1>
+    <p>Vadeli mevduatınızın faiz getirisini, net kazancınızı ve stopaj kesintisini kolayca hesaplayın.</p>
+  </div>
+</section>
+<section class="section" id="hesapla">
+  <div class="container">
+    <h2>Mevduat Faizi Hesaplayıcı</h2>
+    <p style="margin-bottom:20px;text-align:center;color:var(--text-light);">Anapara, yıllık faiz oranı ve vadeyi girerek faiz getirinizi hesaplayın.</p>
+    <div class="calculator-card">
+      <h3>Vadeli Mevduat Hesaplama Aracı</h3>
+      <div class="form-group"><label for="principal">Anapara (TL)</label><input type="number" id="principal" value="100000" min="1000" step="1000"></div>
+      <div class="form-group"><label for="rate">Yıllık Faiz Oranı (%)</label><input type="number" id="rate" value="45" min="0.01" step="0.5"></div>
+      <div class="form-group">
+        <label for="days">Vade</label>
+        <select id="days">
+          <option value="32">32 Gün</option>
+          <option value="62">62 Gün</option>
+          <option value="93">93 Gün (3 Ay)</option>
+          <option value="186" selected>186 Gün (6 Ay)</option>
+          <option value="279">279 Gün (9 Ay)</option>
+          <option value="365">365 Gün (1 Yıl)</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="tax">Stopaj Oranı (%)</label>
+        <select id="tax"><option value="0">0% (Stopajsız)</option><option value="5" selected>5%</option><option value="10">10%</option><option value="15">15%</option></select>
+      </div>
+      <button class="btn" onclick="calculateDeposit()">Hesapla</button>
+      <div class="result-box" id="result">
+        <div style="margin-bottom:10px;"><small>Brüt Faiz Getirisi</small><div class="amount" id="result-gross">0 TL</div></div>
+        <div class="detail">Stopaj Kesintisi: <strong id="result-tax">0 TL</strong></div>
+        <div class="detail">Net Faiz Getirisi: <strong id="result-net">0 TL</strong></div>
+        <div class="detail">Vade Sonu Toplam: <strong id="result-total">0 TL</strong></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section" id="blog">
+  <div class="container">
+    <h2>Mevduat Faizi Rehberleri</h2>
+    <div class="blog-grid">
+      <div class="blog-card"><h3><a href="blog1.html">Mevduat Faizi Nasıl Hesaplanır? 2026 Rehberi</a></h3><p>Vadeli mevduat faiz hesaplama yöntemi, stopaj kesintisi ve net getiri analizi.</p><div class="meta">5 dk okuma · Temel Rehber</div></div>
+      <div class="blog-card"><h3><a href="blog2.html">En Yüksek Mevduat Faizi Veren Bankalar 2026</a></h3><p>2026 yılında en yüksek TL mevduat faizi sunan bankalar ve kampanya oranları karşılaştırması.</p><div class="meta">6 dk okuma · Banka Karşılaştırma</div></div>
+      <div class="blog-card"><h3><a href="blog3.html">32 Gün vs 186 Gün Mevduat: Hangisi Daha Karlı?</a></h3><p>Kısa vadeli ve uzun vadeli mevduat karşılaştırması. Faiz oranı, likidite ve vergi avantajları analizi.</p><div class="meta">5 dk okuma · Vade Karşılaştırma</div></div>
+      <div class="blog-card"><h3><a href="blog4.html">Mevduat Stopaj Vergisi Hesaplama</a></h3><p>Mevduat faizinden kesilen stopaj vergisi oranları, hesaplama yöntemi ve yasal düzenlemeler.</p><div class="meta">4 dk okuma · Vergi</div></div>
+      <div class="blog-card"><h3><a href="blog5.html">Enflasyona Karşı Mevduat mı, Altın mı?</a></h3><p>Yüksek enflasyon döneminde vadeli mevduat ile altın yatırımının reel getiri karşılaştırması.</p><div class="meta">7 dk okuma · Yatırım</div></div>
+    </div>
+  </div>
+</section>
+<section class="covrixa-promo">
+  <div class="container">
+    <h3>Gelişmiş Mevduat Hesaplayıcı Covrixa'da</h3>
+    <p>Bileşik faiz simülasyonu ve detaylı getiri analizi için Covrixa'yı deneyin.</p>
+    <a href="https://covrixa.com/tr/mevduat-faizi-hesaplayici/" class="btn-outline" target="_blank" rel="noopener">Covrixa Mevduat Hesaplayıcı →</a>
+  </div>
+</section>
+<footer><div class="container"><p>© 2026 mevduatfaizi · Tüm hakları saklıdır. · <a href="https://covrixa.com/tr/" target="_blank" rel="noopener">Covrixa</a></p></div></footer>
+<script src="script.js"></script>
+</body>
+</html>
