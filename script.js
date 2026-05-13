@@ -4,7 +4,7 @@ function calculateDeposit() {
   const days = parseInt(document.getElementById('days').value);
   const taxRate = parseFloat(document.getElementById('tax').value) / 100;
   const result = document.getElementById('result');
-  if (!principal || !annualRate || principal <= 0 || annualRate <= 0) return;
+  if (!principal || !annualRate || principal <= 0 || annualRate <= 0) { result.classList.remove('show'); return; }
   const gross = principal * annualRate * (days / 365);
   const taxAmount = gross * taxRate;
   const net = gross - taxAmount;
